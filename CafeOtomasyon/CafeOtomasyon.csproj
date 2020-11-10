@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2D849174-C0ED-4355-9C12-8038908AC4CF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CafeOtomasyon</RootNamespace>
+    <AssemblyName>CafeOtomasyon</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.1, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.1\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\ApplicationDbContext.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BillAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BillAdd.Designer.cs">
+      <DependentUpon>BillAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BillEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BillEdit.Designer.cs">
+      <DependentUpon>BillEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BillList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BillList.Designer.cs">
+      <DependentUpon>BillList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BillPaid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BillPaid.Designer.cs">
+      <DependentUpon>BillPaid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BillWillPay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BillWillPay.Designer.cs">
+      <DependentUpon>BillWillPay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CategoryAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CategoryAdd.Designer.cs">
+      <DependentUpon>CategoryAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CategoryEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CategoryEdit.Designer.cs">
+      <DependentUpon>CategoryEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CategoryList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CategoryList.Designer.cs">
+      <DependentUpon>CategoryList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DrinkAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DrinkAdd.Designer.cs">
+      <DependentUpon>DrinkAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DrinkEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DrinkEdit.Designer.cs">
+      <DependentUpon>DrinkEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DrinkList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DrinkList.Designer.cs">
+      <DependentUpon>DrinkList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EmployeeAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmployeeAdd.Designer.cs">
+      <DependentUpon>EmployeeAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EmployeeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmployeeEdit.Designer.cs">
+      <DependentUpon>EmployeeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EmployeeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmployeeList.Designer.cs">
+      <DependentUpon>EmployeeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FoodAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FoodAdd.Designer.cs">
+      <DependentUpon>FoodAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FoodEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FoodEdit.Designer.cs">
+      <DependentUpon>FoodEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FoodList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FoodList.Designer.cs">
+      <DependentUpon>FoodList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PaymentAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PaymentAdd.Designer.cs">
+      <DependentUpon>PaymentAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PaymentEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PaymentEdit.Designer.cs">
+      <DependentUpon>PaymentEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PaymentList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PaymentList.Designer.cs">
+      <DependentUpon>PaymentList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TableAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TableAdd.Designer.cs">
+      <DependentUpon>TableAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TableCustomerRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TableCustomerRegister.Designer.cs">
+      <DependentUpon>TableCustomerRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TableCustomerRegisterEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TableCustomerRegisterEdit.Designer.cs">
+      <DependentUpon>TableCustomerRegisterEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TableEmpty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TableEmpty.Designer.cs">
+      <DependentUpon>TableEmpty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TableFull.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TableFull.Designer.cs">
+      <DependentUpon>TableFull.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TableList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TableList.Designer.cs">
+      <DependentUpon>TableList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TableNumberAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TableNumberAdd.Designer.cs">
+      <DependentUpon>TableNumberAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TableNumberEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TableNumberEdit.Designer.cs">
+      <DependentUpon>TableNumberEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TableNumberList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TableNumberList.Designer.cs">
+      <DependentUpon>TableNumberList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TableRezervation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TableRezervation.Designer.cs">
+      <DependentUpon>TableRezervation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005091629274_init.cs" />
+    <Compile Include="Migrations\202005091629274_init.Designer.cs">
+      <DependentUpon>202005091629274_init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\BaseHome.cs" />
+    <Compile Include="Models\Bill.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\Table.cs" />
+    <Compile Include="Models\Drink.cs" />
+    <Compile Include="Models\Food.cs" />
+    <Compile Include="Models\Payment.cs" />
+    <Compile Include="Models\TableNumber.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BillAdd.resx">
+      <DependentUpon>BillAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BillEdit.resx">
+      <DependentUpon>BillEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BillList.resx">
+      <DependentUpon>BillList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BillPaid.resx">
+      <DependentUpon>BillPaid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BillWillPay.resx">
+      <DependentUpon>BillWillPay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CategoryAdd.resx">
+      <DependentUpon>CategoryAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CategoryEdit.resx">
+      <DependentUpon>CategoryEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CategoryList.resx">
+      <DependentUpon>CategoryList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DrinkAdd.resx">
+      <DependentUpon>DrinkAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DrinkEdit.resx">
+      <DependentUpon>DrinkEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DrinkList.resx">
+      <DependentUpon>DrinkList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmployeeAdd.resx">
+      <DependentUpon>EmployeeAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmployeeEdit.resx">
+      <DependentUpon>EmployeeEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmployeeList.resx">
+      <DependentUpon>EmployeeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FoodAdd.resx">
+      <DependentUpon>FoodAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FoodEdit.resx">
+      <DependentUpon>FoodEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FoodList.resx">
+      <DependentUpon>FoodList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PaymentAdd.resx">
+      <DependentUpon>PaymentAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PaymentEdit.resx">
+      <DependentUpon>PaymentEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PaymentList.resx">
+      <DependentUpon>PaymentList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TableAdd.resx">
+      <DependentUpon>TableAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TableCustomerRegister.resx">
+      <DependentUpon>TableCustomerRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TableCustomerRegisterEdit.resx">
+      <DependentUpon>TableCustomerRegisterEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TableEmpty.resx">
+      <DependentUpon>TableEmpty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TableFull.resx">
+      <DependentUpon>TableFull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TableList.resx">
+      <DependentUpon>TableList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TableNumberAdd.resx">
+      <DependentUpon>TableNumberAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TableNumberEdit.resx">
+      <DependentUpon>TableNumberEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TableNumberList.resx">
+      <DependentUpon>TableNumberList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005091629274_init.resx">
+      <DependentUpon>202005091629274_init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="img\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
